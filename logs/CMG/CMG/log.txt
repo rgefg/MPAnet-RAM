@@ -1,0 +1,9 @@
+2025-05-27 14:53:23,648 CfgNode({'prefix': 'CMG', 'sample_method': 'identity_random', 'batch_size': 32, 'p_size': 16, 'k_size': 8, 'classification': True, 'triplet': False, 'center_cluster': True, 'center': False, 'margin': 0.7, 'weight_KL': 2.5, 'weight_sid': 0.5, 'weight_sep': 0.5, 'update_rate': 0.2, 'optimizer': 'adam', 'lr': 0.0001, 'wd': 0.0005, 'lr_step': [4, 8], 'fp16': False, 'num_epoch': 10, 'dataset': 'CMG', 'image_size': (384, 128), 'group': False, 'random_flip': True, 'random_crop': True, 'random_erase': True, 'color_jitter': False, 'padding': 10, 'drop_last_stride': True, 'pattern_attention': True, 'modality_attention': 2, 'mutual_learning': True, 'rerank': False, 'num_parts': 6, 'eval_interval': 1, 'start_eval': 0, 'log_period': 150, 'resume': '', 'num_id': 107, 'num_cam': 6, 'data_root': '/root/autodl-tmp/CM-Group'})
+2025-05-27 14:53:24,905 Engine run starting with max_epochs=10.
+2025-05-27 14:53:56,738 Engine run starting with max_epochs=1.
+2025-05-27 14:55:33,792 Epoch[1] Complete. Time taken: 00:01:36.792
+2025-05-27 14:55:33,792 Engine run finished. Time taken: 00:01:37.054
+2025-05-27 14:55:34,072 Engine run starting with max_epochs=1.
+2025-05-27 14:57:04,145 Epoch[1] Complete. Time taken: 00:01:29.557
+2025-05-27 14:57:04,145 Engine run finished. Time taken: 00:01:30.073
+2025-05-27 15:00:32,433 CMG 1-shot: r1 = 0.56, r5 = 2.68, r10 = 5.43, r20 = 10.60, mAP = 0.94
