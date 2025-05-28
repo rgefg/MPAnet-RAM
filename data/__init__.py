@@ -23,20 +23,24 @@ def collate_fn(batch):  # img, label, cam_id, img_path, img_id, bbox
             # bbox: [x1, y1, x2, y2]
             x1, y1, x2, y2 = map(int, bbox)
             cropped = img.crop((x1, y1, x2, y2))  # PIL Image 裁剪
-
+            #cropped.show()
             # 同样的 transform 重新应用
             if hasattr(img, 'transform') and callable(img.transform):
                 cropped = img.transform(cropped)
                 #print(f"has transform:{type(cropped)}")
             #else :
                 #print("no")
+            
+            #cropped.show()
             new_imgs.append(cropped)
             new_labels.append(label)
             new_cam_ids.append(cam_id)
             new_paths.append(path)
             new_img_ids.append(img_id)
     imgs_tensor = torch.stack(new_imgs, dim=0)
+    #print(f"imgs_tensor:{imgs_tensor.shape}")
     labels_tensor = torch.stack(new_labels, dim=0)
+    #print(f"labels_tensor:{labels_tensor.shape}")
     cam_ids_tensor = torch.stack(new_cam_ids, dim=0)
     img_ids_tensor = torch.stack(new_img_ids, dim=0)
 

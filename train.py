@@ -43,7 +43,7 @@ def train(cfg):
                                     image_size=cfg.image_size,
                                     num_workers=8)
     
-    print(f"Length of train_loader: {len(train_loader)}")
+    #                                                                                                                                                                                                                                                                                                                                                                                                                                                                        print(f"Length of train_loader: {len(train_loader)}")
 
     # evaluation data loader
     gallery_loader, query_loader = None, None
@@ -53,7 +53,7 @@ def train(cfg):
                                                        batch_size=64,
                                                        image_size=cfg.image_size,
                                                        num_workers=4)
-    print(f"Length of gally_loader: {len(gallery_loader)}")
+    #print(f"Length of gally_loader: {len(gallery_loader)}")
     # model
     model = Baseline(num_classes=cfg.num_id,
                      pattern_attention=cfg.pattern_attention,

@@ -78,7 +78,7 @@ def eval_CMG(query_feats, query_ids, query_cam_ids, gallery_feats, gallery_ids, 
         names = get_gallery_names_CMG(perm, gallery_cams, gallery_id_set, t, num_shots)
         flag = np.in1d(gallery_names, names)
         g_feat = gallery_feats[flag]
-        print("Flag sum (should > 0):", np.sum(flag))
+        #print("Flag sum (should > 0):", np.sum(flag))
         g_ids = gallery_ids[flag]
         g_cam_ids = gallery_cam_ids[flag]
         if rerank:

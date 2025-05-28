@@ -6,7 +6,7 @@ strategy_cfg.prefix = "baseline"
 
 # setting for loader
 strategy_cfg.sample_method = "random"
-strategy_cfg.batch_size = 32
+strategy_cfg.batch_size = 128
 strategy_cfg.p_size = 16
 strategy_cfg.k_size = 8
 

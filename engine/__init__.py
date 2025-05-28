@@ -94,7 +94,7 @@ def get_trainer(dataset, model, optimizer, lr_scheduler=None, logger=None, write
         elif dataset == 'CMG':
             perm = np.load(os.path.join(dataset_cfg.CMG.data_root, 'npy', 'random_perm.npy'),allow_pickle=True)  # shape: [6, 1, N_ids, 10, num_shots]
             eval_CMG(q_feats, q_ids, q_cams, g_feats, g_ids, g_cams, g_img_paths, perm, num_shots=1, rerank=engine.rerank)
-            eval_CMG(q_feats, q_ids, q_cams, g_feats, g_ids, g_cams, g_img_paths, perm, num_shots=10, rerank=engine.rerank)
+            #eval_CMG(q_feats, q_ids, q_cams, g_feats, g_ids, g_cams, g_img_paths, perm, num_shots=10, rerank=engine.rerank)
 
 
         evaluator.state.feat_list.clear()
@@ -163,7 +163,7 @@ def get_trainer(dataset, model, optimizer, lr_scheduler=None, logger=None, write
             elif dataset=='CMG':
                 perm = np.load(os.path.join(dataset_cfg.CMG.data_root, 'npy', 'random_perm.npy'),allow_pickle=True)
                 mAP, r1, r5, _, _=eval_CMG(q_feats, q_ids, q_cams, g_feats, g_ids, g_cams, g_img_paths, perm,num_shots=1, rerank=engine.rerank)
-                eval_CMG(q_feats, q_ids, q_cams, g_feats, g_ids, g_cams, g_img_paths, perm,num_shots=10, rerank=engine.rerank)
+                #eval_CMG(q_feats, q_ids, q_cams, g_feats, g_ids, g_cams, g_img_paths, perm,num_shots=10, rerank=engine.rerank)
 
             
             if r1 > engine.state.best_rank1:

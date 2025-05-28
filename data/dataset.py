@@ -96,6 +96,10 @@ class CMGDataset(Dataset):
 
         # 仅保留 ID 在 selected_ids 中的图像
         img_paths = [p for p in img_paths if int(os.path.basename(os.path.dirname(p))) in selected_ids]
+        #print("selected_ids:", len(selected_ids))
+        #print("Total image paths found:", len(img_paths))
+        if len(img_paths) == 0:
+            raise RuntimeError(f"No images found! Maybe the IDs in {selected_ids[:10]} don't match the folder structure.")
         #print(f"img_path.shape:{len(img_paths)}")
         if mode == 'gallery':
             img_paths = [p for p in img_paths if int(os.path.basename(p).split('_')[0][-1]) in (1,2,3)]

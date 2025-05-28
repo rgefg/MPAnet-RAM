@@ -1,9 +1,145 @@
-2025-05-27 14:53:23,648 CfgNode({'prefix': 'CMG', 'sample_method': 'identity_random', 'batch_size': 32, 'p_size': 16, 'k_size': 8, 'classification': True, 'triplet': False, 'center_cluster': True, 'center': False, 'margin': 0.7, 'weight_KL': 2.5, 'weight_sid': 0.5, 'weight_sep': 0.5, 'update_rate': 0.2, 'optimizer': 'adam', 'lr': 0.0001, 'wd': 0.0005, 'lr_step': [4, 8], 'fp16': False, 'num_epoch': 10, 'dataset': 'CMG', 'image_size': (384, 128), 'group': False, 'random_flip': True, 'random_crop': True, 'random_erase': True, 'color_jitter': False, 'padding': 10, 'drop_last_stride': True, 'pattern_attention': True, 'modality_attention': 2, 'mutual_learning': True, 'rerank': False, 'num_parts': 6, 'eval_interval': 1, 'start_eval': 0, 'log_period': 150, 'resume': '', 'num_id': 107, 'num_cam': 6, 'data_root': '/root/autodl-tmp/CM-Group'})
-2025-05-27 14:53:24,905 Engine run starting with max_epochs=10.
-2025-05-27 14:53:56,738 Engine run starting with max_epochs=1.
-2025-05-27 14:55:33,792 Epoch[1] Complete. Time taken: 00:01:36.792
-2025-05-27 14:55:33,792 Engine run finished. Time taken: 00:01:37.054
-2025-05-27 14:55:34,072 Engine run starting with max_epochs=1.
-2025-05-27 14:57:04,145 Epoch[1] Complete. Time taken: 00:01:29.557
-2025-05-27 14:57:04,145 Engine run finished. Time taken: 00:01:30.073
-2025-05-27 15:00:32,433 CMG 1-shot: r1 = 0.56, r5 = 2.68, r10 = 5.43, r20 = 10.60, mAP = 0.94
+2025-05-28 11:12:51,848 CfgNode({'prefix': 'CMG', 'sample_method': 'identity_random', 'batch_size': 128, 'p_size': 16, 'k_size': 8, 'classification': True, 'triplet': False, 'center_cluster': True, 'center': False, 'margin': 0.7, 'weight_KL': 2.5, 'weight_sid': 0.5, 'weight_sep': 0.5, 'update_rate': 0.2, 'optimizer': 'adam', 'lr': 0.00035, 'wd': 0.0005, 'lr_step': [40, 80], 'fp16': False, 'num_epoch': 100, 'dataset': 'CMG', 'image_size': (384, 128), 'group': False, 'random_flip': True, 'random_crop': True, 'random_erase': True, 'color_jitter': False, 'padding': 10, 'drop_last_stride': True, 'pattern_attention': True, 'modality_attention': 2, 'mutual_learning': True, 'rerank': False, 'num_parts': 6, 'eval_interval': 5, 'start_eval': 75, 'log_period': 150, 'resume': '', 'num_id': 107, 'num_cam': 6, 'data_root': '/root/autodl-tmp/CM-Group'})
+2025-05-28 11:12:53,094 Engine run starting with max_epochs=100.
+2025-05-28 11:13:30,693 Epoch[1] Complete. Time taken: 00:00:37.462
+2025-05-28 11:13:51,166 Epoch[2] Complete. Time taken: 00:00:20.473
+2025-05-28 11:14:19,067 Epoch[3] Complete. Time taken: 00:00:27.900
+2025-05-28 11:14:41,005 Epoch[4] Complete. Time taken: 00:00:21.937
+2025-05-28 11:14:57,920 Epoch[5] Complete. Time taken: 00:00:16.915
+2025-05-28 11:15:19,155 Epoch[6] Complete. Time taken: 00:00:21.234
+2025-05-28 11:15:36,322 Epoch[7] Complete. Time taken: 00:00:17.167
+2025-05-28 11:15:57,310 Epoch[8] Complete. Time taken: 00:00:20.987
+2025-05-28 11:16:18,086 Epoch[9] Complete. Time taken: 00:00:20.776
+2025-05-28 11:16:38,966 Epoch[10] Complete. Time taken: 00:00:20.879
+2025-05-28 11:16:55,619 Epoch[11] Complete. Time taken: 00:00:16.653
+2025-05-28 11:17:16,355 Epoch[12] Complete. Time taken: 00:00:20.736
+2025-05-28 11:17:33,263 Epoch[13] Complete. Time taken: 00:00:16.907
+2025-05-28 11:17:53,937 Epoch[14] Complete. Time taken: 00:00:20.673
+2025-05-28 11:18:10,338 Epoch[15] Complete. Time taken: 00:00:16.401
+2025-05-28 11:18:31,142 Epoch[16] Complete. Time taken: 00:00:20.803
+2025-05-28 11:18:47,792 Epoch[17] Complete. Time taken: 00:00:16.649
+2025-05-28 11:19:08,516 Epoch[18] Complete. Time taken: 00:00:20.724
+2025-05-28 11:19:25,265 Epoch[19] Complete. Time taken: 00:00:16.749
+2025-05-28 11:19:46,199 Epoch[20] Complete. Time taken: 00:00:20.933
+2025-05-28 11:20:03,019 Epoch[21] Complete. Time taken: 00:00:16.819
+2025-05-28 11:20:23,657 Epoch[22] Complete. Time taken: 00:00:20.638
+2025-05-28 11:20:40,607 Epoch[23] Complete. Time taken: 00:00:16.949
+2025-05-28 11:21:02,361 Epoch[24] Complete. Time taken: 00:00:21.754
+2025-05-28 11:21:19,185 Epoch[25] Complete. Time taken: 00:00:16.823
+2025-05-28 11:21:40,414 Epoch[26] Complete. Time taken: 00:00:21.229
+2025-05-28 11:21:57,335 Epoch[27] Complete. Time taken: 00:00:16.921
+2025-05-28 11:22:17,810 Epoch[28] Complete. Time taken: 00:00:20.474
+2025-05-28 11:22:34,611 Epoch[29] Complete. Time taken: 00:00:16.801
+2025-05-28 11:22:55,653 Epoch[30] Complete. Time taken: 00:00:21.041
+2025-05-28 11:23:12,333 Epoch[31] Complete. Time taken: 00:00:16.680
+2025-05-28 11:23:33,311 Epoch[32] Complete. Time taken: 00:00:20.978
+2025-05-28 11:23:49,783 Epoch[33] Complete. Time taken: 00:00:16.471
+2025-05-28 11:24:10,757 Epoch[34] Complete. Time taken: 00:00:20.974
+2025-05-28 11:24:27,606 Epoch[35] Complete. Time taken: 00:00:16.848
+2025-05-28 11:24:48,176 Epoch[36] Complete. Time taken: 00:00:20.570
+2025-05-28 11:25:05,295 Epoch[37] Complete. Time taken: 00:00:17.118
+2025-05-28 11:25:26,046 Epoch[38] Complete. Time taken: 00:00:20.751
+2025-05-28 11:25:42,604 Epoch[39] Complete. Time taken: 00:00:16.557
+2025-05-28 11:26:04,763 Epoch[40] Complete. Time taken: 00:00:22.159
+2025-05-28 11:26:21,408 Epoch[41] Complete. Time taken: 00:00:16.645
+2025-05-28 11:26:42,544 Epoch[42] Complete. Time taken: 00:00:21.135
+2025-05-28 11:26:59,120 Epoch[43] Complete. Time taken: 00:00:16.575
+2025-05-28 11:27:20,058 Epoch[44] Complete. Time taken: 00:00:20.938
+2025-05-28 11:27:37,094 Epoch[45] Complete. Time taken: 00:00:17.035
+2025-05-28 11:27:58,067 Epoch[46] Complete. Time taken: 00:00:20.973
+2025-05-28 11:28:14,615 Epoch[47] Complete. Time taken: 00:00:16.547
+2025-05-28 11:28:35,425 Epoch[48] Complete. Time taken: 00:00:20.810
+2025-05-28 11:28:51,998 Epoch[49] Complete. Time taken: 00:00:16.572
+2025-05-28 11:29:13,098 Epoch[50] Complete. Time taken: 00:00:21.099
+2025-05-28 11:29:29,762 Epoch[51] Complete. Time taken: 00:00:16.664
+2025-05-28 11:29:50,676 Epoch[52] Complete. Time taken: 00:00:20.914
+2025-05-28 11:30:07,788 Epoch[53] Complete. Time taken: 00:00:17.111
+2025-05-28 11:30:29,433 Epoch[54] Complete. Time taken: 00:00:21.645
+2025-05-28 11:30:46,380 Epoch[55] Complete. Time taken: 00:00:16.946
+2025-05-28 11:31:08,603 Epoch[56] Complete. Time taken: 00:00:22.223
+2025-05-28 11:31:25,623 Epoch[57] Complete. Time taken: 00:00:17.020
+2025-05-28 11:31:46,825 Epoch[58] Complete. Time taken: 00:00:21.201
+2025-05-28 11:32:03,859 Epoch[59] Complete. Time taken: 00:00:17.034
+2025-05-28 11:32:25,670 Epoch[60] Complete. Time taken: 00:00:21.811
+2025-05-28 11:32:43,146 Epoch[61] Complete. Time taken: 00:00:17.475
+2025-05-28 11:33:04,997 Epoch[62] Complete. Time taken: 00:00:21.851
+2025-05-28 11:33:21,853 Epoch[63] Complete. Time taken: 00:00:16.856
+2025-05-28 11:33:42,957 Epoch[64] Complete. Time taken: 00:00:21.103
+2025-05-28 11:33:59,751 Epoch[65] Complete. Time taken: 00:00:16.793
+2025-05-28 11:34:22,537 Epoch[66] Complete. Time taken: 00:00:22.786
+2025-05-28 11:34:39,519 Epoch[67] Complete. Time taken: 00:00:16.982
+2025-05-28 11:35:00,959 Epoch[68] Complete. Time taken: 00:00:21.439
+2025-05-28 11:35:17,910 Epoch[69] Complete. Time taken: 00:00:16.951
+2025-05-28 11:35:39,434 Epoch[70] Complete. Time taken: 00:00:21.524
+2025-05-28 11:35:56,760 Epoch[71] Complete. Time taken: 00:00:17.325
+2025-05-28 11:36:17,925 Epoch[72] Complete. Time taken: 00:00:21.165
+2025-05-28 11:36:35,117 Epoch[73] Complete. Time taken: 00:00:17.191
+2025-05-28 11:36:56,596 Epoch[74] Complete. Time taken: 00:00:21.479
+2025-05-28 11:37:13,677 Epoch[75] Complete. Time taken: 00:00:17.081
+2025-05-28 11:37:34,861 Epoch[76] Complete. Time taken: 00:00:21.184
+2025-05-28 11:37:51,388 Epoch[77] Complete. Time taken: 00:00:16.526
+2025-05-28 11:38:12,987 Epoch[78] Complete. Time taken: 00:00:21.599
+2025-05-28 11:38:29,892 Epoch[79] Complete. Time taken: 00:00:16.905
+2025-05-28 11:38:51,295 Engine run starting with max_epochs=1.
+2025-05-28 11:40:23,380 Epoch[1] Complete. Time taken: 00:01:31.846
+2025-05-28 11:40:23,381 Engine run finished. Time taken: 00:01:32.085
+2025-05-28 11:40:23,641 Engine run starting with max_epochs=1.
+2025-05-28 11:41:50,241 Epoch[1] Complete. Time taken: 00:01:26.028
+2025-05-28 11:41:50,241 Engine run finished. Time taken: 00:01:26.600
+2025-05-28 11:45:24,998 CMG 1-shot: r1 = 17.91, r5 = 38.81, r10 = 51.35, r20 = 65.19, mAP = 8.94
+2025-05-28 11:45:25,779 Epoch[80] Complete. Time taken: 00:06:55.886
+2025-05-28 11:45:43,131 Epoch[81] Complete. Time taken: 00:00:17.351
+2025-05-28 11:46:05,072 Epoch[82] Complete. Time taken: 00:00:21.941
+2025-05-28 11:46:22,234 Epoch[83] Complete. Time taken: 00:00:17.161
+2025-05-28 11:46:44,003 Epoch[84] Complete. Time taken: 00:00:21.769
+2025-05-28 11:47:01,160 Engine run starting with max_epochs=1.
+2025-05-28 11:48:13,626 Epoch[1] Complete. Time taken: 00:01:12.135
+2025-05-28 11:48:13,627 Engine run finished. Time taken: 00:01:12.466
+2025-05-28 11:48:13,925 Engine run starting with max_epochs=1.
+2025-05-28 11:49:31,474 Epoch[1] Complete. Time taken: 00:01:16.816
+2025-05-28 11:49:31,474 Engine run finished. Time taken: 00:01:17.549
+2025-05-28 11:53:12,309 CMG 1-shot: r1 = 18.15, r5 = 39.10, r10 = 51.78, r20 = 65.72, mAP = 9.04
+2025-05-28 11:53:13,296 Epoch[85] Complete. Time taken: 00:06:29.292
+2025-05-28 11:53:36,855 Epoch[86] Complete. Time taken: 00:00:23.558
+2025-05-28 11:53:54,019 Epoch[87] Complete. Time taken: 00:00:17.164
+2025-05-28 11:54:16,191 Epoch[88] Complete. Time taken: 00:00:22.171
+2025-05-28 11:54:33,457 Epoch[89] Complete. Time taken: 00:00:17.266
+2025-05-28 11:54:55,786 Engine run starting with max_epochs=1.
+2025-05-28 11:55:56,752 Epoch[1] Complete. Time taken: 00:01:00.471
+2025-05-28 11:55:56,752 Engine run finished. Time taken: 00:01:00.966
+2025-05-28 11:55:57,095 Engine run starting with max_epochs=1.
+2025-05-28 11:57:11,051 Epoch[1] Complete. Time taken: 00:01:13.424
+2025-05-28 11:57:11,051 Engine run finished. Time taken: 00:01:13.956
+2025-05-28 12:00:49,292 CMG 1-shot: r1 = 18.07, r5 = 38.94, r10 = 51.55, r20 = 65.57, mAP = 9.02
+2025-05-28 12:00:49,835 Epoch[90] Complete. Time taken: 00:06:16.377
+2025-05-28 12:01:07,043 Epoch[91] Complete. Time taken: 00:00:17.207
+2025-05-28 12:01:29,333 Epoch[92] Complete. Time taken: 00:00:22.290
+2025-05-28 12:01:46,877 Epoch[93] Complete. Time taken: 00:00:17.543
+2025-05-28 12:02:08,879 Epoch[94] Complete. Time taken: 00:00:22.001
+2025-05-28 12:02:26,336 Engine run starting with max_epochs=1.
+2025-05-28 12:03:29,504 Epoch[1] Complete. Time taken: 00:01:02.792
+2025-05-28 12:03:29,504 Engine run finished. Time taken: 00:01:03.168
+2025-05-28 12:03:29,844 Engine run starting with max_epochs=1.
+2025-05-28 12:04:44,717 Epoch[1] Complete. Time taken: 00:01:14.085
+2025-05-28 12:04:44,717 Engine run finished. Time taken: 00:01:14.873
+2025-05-28 12:08:17,520 CMG 1-shot: r1 = 18.26, r5 = 39.26, r10 = 51.86, r20 = 65.71, mAP = 9.09
+2025-05-28 12:08:18,331 Epoch[95] Complete. Time taken: 00:06:09.452
+2025-05-28 12:08:40,849 Epoch[96] Complete. Time taken: 00:00:22.518
+2025-05-28 12:08:58,031 Epoch[97] Complete. Time taken: 00:00:17.181
+2025-05-28 12:09:20,528 Epoch[98] Complete. Time taken: 00:00:22.497
+2025-05-28 12:09:37,568 Epoch[99] Complete. Time taken: 00:00:17.039
+2025-05-28 12:10:00,511 Engine run starting with max_epochs=1.
+2025-05-28 12:11:00,365 Epoch[1] Complete. Time taken: 00:00:59.336
+2025-05-28 12:11:00,366 Engine run finished. Time taken: 00:00:59.854
+2025-05-28 12:11:00,666 Engine run starting with max_epochs=1.
+2025-05-28 12:12:13,672 Epoch[1] Complete. Time taken: 00:01:12.517
+2025-05-28 12:12:13,672 Engine run finished. Time taken: 00:01:13.006
+2025-05-28 12:15:47,535 CMG 1-shot: r1 = 18.06, r5 = 38.87, r10 = 51.45, r20 = 65.42, mAP = 9.01
+2025-05-28 12:15:48,201 Epoch[100] Complete. Time taken: 00:06:10.632
+2025-05-28 12:15:48,201 Engine run starting with max_epochs=1.
+2025-05-28 12:16:49,726 Epoch[1] Complete. Time taken: 00:01:01.041
+2025-05-28 12:16:49,726 Engine run finished. Time taken: 00:01:01.525
+2025-05-28 12:16:50,099 Engine run starting with max_epochs=1.
+2025-05-28 12:18:23,737 Epoch[1] Complete. Time taken: 00:01:33.120
+2025-05-28 12:18:23,737 Engine run finished. Time taken: 00:01:33.638
+2025-05-28 12:22:00,772 CMG 1-shot: r1 = 18.06, r5 = 38.87, r10 = 51.45, r20 = 65.42, mAP = 9.01
+2025-05-28 12:22:01,442 Engine run finished. Time taken: 01:09:08.347

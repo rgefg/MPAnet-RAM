@@ -13,7 +13,7 @@ class CrossModalityRandomSampler(Sampler):
         self.rgb_list = []
         self.ir_list = []
         for i, cam in enumerate(dataset.cam_ids):
-            if cam in [3, 6]:
+            if cam in [4,5, 6]:
                 self.ir_list.append(i)              #所有 IR 图像的 index
             else:
                 self.rgb_list.append(i)
@@ -63,7 +63,7 @@ class CrossModalityIdentitySampler(Sampler):                #在每个 batch 中
         self.id2idx_rgb = defaultdict(list)          #key->list
         self.id2idx_ir = defaultdict(list)
         for i, identity in enumerate(dataset.ids):
-            if dataset.cam_ids[i] in [3, 6]:
+            if dataset.cam_ids[i] in [4,5, 6]:
                 self.id2idx_ir[identity].append(i)
             else:
                 self.id2idx_rgb[identity].append(i)
@@ -106,7 +106,7 @@ class RandomIdentitySampler(Sampler):
         self.index_dic_R = defaultdict(list)
         self.index_dic_I = defaultdict(list)
         for i, identity in enumerate(data_source.ids):
-            if data_source.cam_ids[i] in [3, 6]:
+            if data_source.cam_ids[i] in [4,5,6]:
                 self.index_dic_I[identity].append(i)
             else:
                 self.index_dic_R[identity].append(i)
